@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
+import { createHashRouter, Navigate, RouterProvider } from "react-router-dom";
 
 import "./index.css";
 import App from "./App";
@@ -11,7 +11,7 @@ import PoolPage from "./pages/pool";
 import CreatePoolPage from "./pages/create-pool";
 import { TonClientProvider } from "./hooks/common/useTonClient";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         path: "/",
         element: <Navigate replace to={"/swap"} />,
